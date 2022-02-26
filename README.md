@@ -39,10 +39,7 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
   ```
     Output: id_clean.npy & id_label.npy (for training) ; id_extendbox.npy & id_mask.npy & id_origin.npy & id_spacing.npy (for vox2world) 
   ```
-- Start training and testing
-  ```
-    bash train_detector.sh
-  ```
+- Start training and testing 
   - training
   ```
     python main_detector_recon.py --model OSAF_YOLOv3 -b [batch_size] --epochs [num_epochs] --save-dir [save_dir_path] --save-freq [save_freq_ckpt] --gpu '0' --n_test [number of gpu for test] --lr [lr_rate] --cross [1-5 set which cross_data be used] #--resume [resume ckpt]
@@ -56,7 +53,6 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
   ```
     output id_lbb.npy (label), id_pbb.npy (predicted bboxes)
   ```
-
 
 - Compute CPM (After test all 5 fold)
   - Generate result.csv
