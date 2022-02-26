@@ -42,17 +42,14 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
 - Start training and testing 
   - training
   ```
-    python main_detector_recon.py --model OSAF_YOLOv3 -b [batch_size] --epochs [num_epochs] --save-dir [save_dir_path] --save-freq [save_freq_ckpt] --gpu '0' --n_test [number of gpu for test] --lr [lr_rate] --cross [1-5 set which cross_data be used] #--resume [resume ckpt]
+    python main_detector_recon.py --model OSAF_YOLOv3 -b [batch_size] --epochs [num_epochs] --save-dir [save_dir_path] --save-freq [save_freq_ckpt] --gpu '0' --n_test [number of gpu for test] --lr [lr_rate] --cross [1-5 set which cross_data be used]
     eg: python main_detector_recon.py --model OSAF_YOLOv3 -b 2 --epochs 100 --save-dir OSAF_YOLOv3_testcross1 --save-freq 1 --gpu '0' --n_test 1 --lr 0.001 --cross 1 
   ```
   - testing
   ```
     python main_detector_recon.py --model OSAF_YOLOv3 --resume [resume_ckpt] --save-dir [] --test 1 --gpu '0' --n_test [] --cross []
     eg: python main_detector_recon.py --model OSAF_YOLOv3 --test 1 --cross 1 --resume "./results/OSAF_YOLOv3_testcross1/195.ckpt" --save-dir "OSAF_YOLOv3_testcross1" --gpu 0
-  ```
-  ```
-    output id_lbb.npy (label), id_pbb.npy (predicted bboxes)
-  ```
+  ```  
 
 - Compute CPM (After test all 5 fold)
   - Generate result.csv
