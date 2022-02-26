@@ -22,6 +22,8 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
 - Python 3.6
 - torch 0.4.1
 - torchvision 0.2.0
+- SimpleITK
+- scikit-image
 
 ## Files:
 - LUNA.json: Every Case ID stored in .json for make_dataset.py
@@ -37,10 +39,6 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
   ```
     Output: id_clean.npy & id_label.npy (for training) ; id_extendbox.npy & id_mask.npy & id_origin.npy & id_spacing.npy (for vox2world) 
   ```
-- Ready for Training and Testing
-  - Modify config['crop_size'] in OSAF_YOLOv3.py (res18.py ...) at training stage
-  - Modify margin & sidelen in main_detector_recon.py (VOI Size for test = margin*2 + sidelen)
-
 - Start training and testing
   ```
     bash train_detector.sh
@@ -53,7 +51,7 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
   - testing
   ```
     python main_detector_recon.py --model OSAF_YOLOv3 --resume [resume_ckpt] --save-dir [] --test 1 --gpu '0' --n_test [] --cross []
-    eg: python main_detector_recon.py --model $model --test 1 --cross 1 --resume "./results/${model}_testcross1/195.ckpt" --save-dir "${model}_testcross1" --gpu 0
+    eg: python main_detector_recon.py --model OSAF_YOLOv3 --test 1 --cross 1 --resume "./results/OSAF_YOLOv3_testcross1/195.ckpt" --save-dir "OSAF_YOLOv3_testcross1" --gpu 0
   ```
   ```
     output id_lbb.npy (label), id_pbb.npy (predicted bboxes)
