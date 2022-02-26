@@ -28,7 +28,7 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
 ## Files:
 - LUNA.json: Every Case ID stored in .json for make_dataset.py
 - test_0222_1 ~ test_0222_5: Five dir containing train/val/test.json (Case ID) respectively
-- Download LUNA16 dataset from Grand Challeng: https://luna16.grand-challenge.org and save at the following filepaths
+- Download LUNA16 dataset from Grand Challeng: https://luna16.grand-challenge.org and save at the following filepaths  
   ./data/LUNA16/allset: all .raw and .mhd of LUNA16 data  
   ./data/LUNA16/seg-lungs-LUNA16: all .zraw and .mhd of LUNA16 mask
 
