@@ -48,7 +48,7 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
   - testing
   ```
     python main_detector_recon.py --model OSAF_YOLOv3 --resume [resume_ckpt] --save-dir [] --test 1 --gpu '0' --n_test [] --cross []
-    eg: python main_detector_recon.py --model OSAF_YOLOv3 --test 1 --cross 1 --resume "./results/OSAF_YOLOv3_testcross1/195.ckpt" --save-dir "OSAF_YOLOv3_testcross1" --gpu 0
+    eg: python main_detector_recon.py --model OSAF_YOLOv3 --test 1 --cross 1 --resume "./results/OSAF_YOLOv3_testcross1/1.ckpt" --save-dir "OSAF_YOLOv3_testcross1" --gpu 0
   ```  
 
 - Compute CPM (After test all 5 fold)
