@@ -451,8 +451,8 @@ if __name__ == '__main__':
 
     net = VoVNet([32, 32, 32, 32], [64, 64, 64, 64], [1, 1, 2, 2], 5)
     print(net)
-    x = torch.zeros((2, 1, 96, 96, 96))
-    coord = torch.zeros(2, 3, 24, 24, 24)
+    x = torch.zeros((2, 1, 80, 80, 80))
+    coord = torch.zeros(2, 3, 20, 20, 20)
     print(net(x, coord).size())
 
 
