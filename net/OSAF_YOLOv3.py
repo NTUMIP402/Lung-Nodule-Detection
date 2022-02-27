@@ -388,9 +388,7 @@ class VoVNet(nn.Module):
 
         self.head20 = nn.Conv3d(64, len(config['anchors']) * 5, 1 , 1, 0)
 
-    # def forward(self, input, coord, mode='train'):
-    def forward(self, input, mode='train'):
-
+    def forward(self, input, coord, mode='train'):    
         recon= input
 
         x = self.basic_conv(input) # 128
