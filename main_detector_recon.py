@@ -76,9 +76,9 @@ def main():
 	global args, best_loss
 	datadir = config_training['preprocess_result_path']
 	
-	train_id = './test_0222_' + args.cross + '/LUNA_train.json'
-	val_id = './test_0222_' + args.cross + '/LUNA_val.json'
-	test_id = './test_0222_' + args.cross + '/LUNA_test.json'
+	train_id = './json/' + args.cross + '/LUNA_train.json'
+	val_id = './json/' + args.cross + '/LUNA_val.json'
+	test_id = './json/' + args.cross + '/LUNA_test.json'
 
 	torch.manual_seed(0)
 	cudnn.benchmark = False
