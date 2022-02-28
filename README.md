@@ -3,7 +3,8 @@ A One-stage Method for lung nodule detection in LUNA16 dataset
 
 ## Scripts:
 - Would be executed:
-  - config_training.py: set filepaths   
+  - config_training.py: set filepaths
+  - data_detector: generate data loader during training and testing  
   - prepare.py: LUNA16 dataset preprocessing   
   - main_detector_recon.py: model training and inference
   - GenerateCSV.py: Generate result.csv for computing CPM
